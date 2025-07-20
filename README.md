@@ -24,7 +24,7 @@ Check out BragBoard in action:
 
 - **Frontend:** HTML, Tailwind CSS, Vanilla JavaScript
 - **Backend:** Firebase Firestore
-- **Hosting:** Vercel
+- **Hosting:** GitHub
 
 ## 🏁 Getting Started
 

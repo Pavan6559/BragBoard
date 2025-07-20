@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const achievementsTimeline = document.getElementById("achievementsTimeline");
     data.achievements.forEach(ach => {
         const item = document.createElement("div");
-        item.className = "relative pl-6 hover:scale-105";
+        item.className = "relative pl-6 hover:scale-105 transition-all";
 
         item.innerHTML = `
             <div class="absolute -left-3 top-2 w-3 h-3 bg-green-400 rounded-full"></div>
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
 
-    
+    // so how was my code since it was my last page
 
 });
 

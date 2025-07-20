@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Create Dashboard | BragBoard</title>
+    <link rel="stylesheet" href="output.css" />
+    <script type="module" src="dashboard.js" defer ></script>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+</head>
+<body class="min-h-screen flex flex-col bg-green-50">
+    <!-- Navbar -->
+    <nav class="bg-green-300 px-6 py-4 text-gray-800 shadow-lg sticky top-0 z-10">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <a href="#" class="text-2xl md:text-3xl font-bold tracking-tight">BragBoard</a>
+            <div class="hidden md:flex space-x-8 items-center font-medium">
+                <a href="#" class="hover:text-green-800 transition-colors">Home</a>
+                <a href="#" class="hover:text-green-800 transition-colors">About</a>
+                <a href="#" class="hover:text-green-800 transition-colors">Profile</a>
+                <a href="#" class="hover:text-green-800 transition-colors">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-800 px-2 text-xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="options"></div>
+    </nav>
+
+    <main class="flex-grow p-8 max-w-4xl mx-auto w-full">
+        <div class="bg-white rounded-xl shadow-md p-8">
+            <h1 class="text-4xl font-bold text-center mb-8 text-gray-800">Create Your Dashboard</h1>
+
+            <!-- Name Input -->
+            <div class="mb-8">
+                <label class="block text-gray-700 font-semibold mb-2 text-lg">Your Name</label>
+                <input type="text" id="nameInput" class="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-green-400 focus:outline-none transition-colors" placeholder="Enter your name">
+                <input id="linkedinInput" type="text" placeholder="LinkedIn URL (optional)" class="w-full p-3 border-2 mt-2 border-gray-200 rounded-lg focus:border-green-400 focus:outline-none transition-colors">
+                <input id="githubInput" type="text" placeholder="GitHub URL (optional)" class="w-full p-3 border-2 mt-2 border-gray-200 rounded-lg focus:border-green-400 focus:outline-none transition-colors">
+                <input id="instagramInput" type="text" placeholder="Instagram URL (optional)" class="w-full p-3 border-2 mt-2 border-gray-200 rounded-lg focus:border-green-400 focus:outline-none transition-colors">
+            </div>
+
+            <!-- Projects Section -->
+            <div class="mb-8 p-6 bg-green-50 rounded-lg">
+                <label class="block text-gray-700 font-semibold mb-3 text-lg">Projects</label>
+                <div id="projectsContainer" class="space-y-4"></div>
+                <button id="addProjectBtn" class="mt-4 bg-green-400 text-white px-6 py-3 rounded-lg hover:bg-green-500 transition-colors font-medium">
+                    <i class="fas fa-plus mr-2"></i>Add Project
+                </button>
+            </div>
+
+            <!-- Hackathons Section -->
+            <div class="mb-8 p-6 bg-green-50 rounded-lg">
+                <label class="block text-gray-700 font-semibold mb-3 text-lg">Hackathons</label>
+                <div id="hackathonsContainer" class="space-y-4"></div>
+                <button id="addHackathonBtn" class="mt-4 bg-green-400 text-white px-6 py-3 rounded-lg hover:bg-green-500 transition-colors font-medium">
+                    <i class="fas fa-plus mr-2"></i>Add Hackathon
+                </button>
+            </div>
+
+            <!-- Achievements Section -->
+            <div class="mb-8 p-6 bg-green-50 rounded-lg">
+                <label class="block text-gray-700 font-semibold mb-3 text-lg">Achievements</label>
+                <div id="achievementsContainer" class="space-y-4"></div>
+                <button id="addAchievementBtn" class="mt-4 bg-green-400 text-white px-6 py-3 rounded-lg hover:bg-green-500 transition-colors font-medium">
+                    <i class="fas fa-plus mr-2"></i>Add Achievement
+                </button>
+            </div>
+
+            <!-- Certifications Section -->
+            <div class="mb-8 p-6 bg-green-50 rounded-lg">
+                <label class="block text-gray-700 font-semibold mb-3 text-lg">Certifications</label>
+                <div id="certificationsContainer" class="space-y-4"></div>
+                <button id="addCertificationBtn" class="mt-4 bg-green-400 text-white px-6 py-3 rounded-lg hover:bg-green-500 transition-colors font-medium">
+                    <i class="fas fa-plus mr-2"></i>Add Certification
+                </button>
+            </div>
+
+            <!-- save and preview buttons -->
+            <div class="flex flex-col sm:flex-row sm:justify-between sm:space-x-4 mt-10 space-y-4 sm:space-y-0">
+                <button id="saveBtn" class="bg-green-500 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-lg hover:bg-green-600 transition-colors font-medium text-base sm:text-lg">
+                    <i class="fas fa-save mr-2"></i>Save Dashboard
+                </button>
+                <button id="previewBtn" class="bg-gray-500 text-white px-6 py-2 sm:px-8 sm:py-3 rounded-lg hover:bg-gray-600 transition-colors font-medium text-base sm:text-lg">
+                    <i class="fas fa-eye mr-2"></i>Preview
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-300 text-center text-gray-700 p-4 mt-8">
+        <div class="max-w-6xl mx-auto">
+            © 2025 Pavan Prakash Lella • BragBoard
+        </div>
+    </footer>
+
+</body>
+</html>

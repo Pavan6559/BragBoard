@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>BragBoard | Dashboard</title>
+    <link rel="stylesheet" href="output.css" />
+    <script src="display.js" type="module"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+<body class="bg-green-50 min-h-screen flex flex-col font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-green-300 px-6 py-4 shadow-lg flex justify-between items-center sticky top-0 z-20">
+        <h1 id="userNameDisplay" class="text-2xl font-bold text-black tracking-tight">
+            BragBoard <span class="text-green-50">Dashboard</span>
+        </h1>
+        <button id="shareBtn" class="bg-green-400 hover:bg-green-500 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-md flex items-center">
+            <i class="fas fa-share mr-2"></i>Share
+        </button>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow p-8 max-w-7xl mx-auto w-full space-y-16">
+
+        <!-- Projects Section -->
+        <section id="projectsSection">
+            <div class="text-center mb-8">
+                <h2 class="text-4xl font-bold text-gray-800 mb-2">My Projects</h2>
+                <div class="w-24 h-1.5 bg-green-400 mx-auto rounded-full"></div>
+            </div>
+            <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Project cards inserted by display.js -->
+            </div>
+        </section>
+
+        <!-- Hackathons Section -->
+        <section id="hackathonsSection">
+            <div class="text-center mb-8">
+                <h2 class="text-4xl font-bold text-gray-800 mb-2">Hackathons</h2>
+                <div class="w-24 h-1.5 bg-green-400 mx-auto rounded-full"></div>
+            </div>
+            <div id="hackathonsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Hackathon cards inserted by display.js -->
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievementsSection">
+            <div class="text-center mb-8">
+                <h2 class="text-4xl font-bold text-gray-800 mb-2">Achievements</h2>
+                <div class="w-24 h-1.5 bg-green-400 mx-auto rounded-full"></div>
+            </div>
+            <div id="achievementsTimeline" class="relative border-l-4 border-green-400 pl-6 space-y-6">
+                <!-- Achievement timeline entries inserted by display.js -->
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certificationsSection">
+            <div class="text-center mb-8">
+                <h2 class="text-4xl font-bold text-gray-800 mb-2">Certifications</h2>
+                <div class="w-24 h-1.5 bg-green-400 mx-auto rounded-full"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-green-300 text-center text-gray-700 p-4">
+        <div id="socialLinks" class="flex justify-center space-x-6 mb-2">
+            <!-- Social links inserted by display.js -->
+        </div>
+        <p class="mt-2 text-sm tracking-wide">© 2025 Pavan Prakash Lella • BragBoard Portfolio</p>
+    </footer>
+
+
+</body>
+</html>

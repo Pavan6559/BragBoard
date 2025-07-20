@@ -43,7 +43,7 @@ function createFileInput(container) {
         // Check size (100KB = 100 * 1024 = 102400 bytes)
         const base64Size = Math.round((base64.length * 3) / 4);
         if (base64Size > 300 * 1024) {
-            alert("Image too large! Please upload an image under 150KB for stability.");
+            alert("Image too large! Please upload an image under 300KB for stability.");
             fileNameDisplay.textContent = "Upload failed: Image too large";
             return;
         }

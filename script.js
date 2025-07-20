@@ -7,10 +7,9 @@ createbtn.addEventListener("click",function(){
 // pressing bars give you options
 const bars = document.getElementById("menu-btn");
 const options = document.getElementById("options");
-let menuOpen = false; // toggle tracker
+let menuOpen = false; 
 bars.addEventListener("click", function() {
     if (!menuOpen) {
-        // Add links
         const links = [
             { text: "Home", href: "#" , id:"home" },
             { text: "About", href: "#" },
@@ -26,7 +25,6 @@ bars.addEventListener("click", function() {
         });
         menuOpen = true;
     } else {
-        // Remove all appended links
         document.querySelectorAll(".link-item").forEach(link => link.remove());
         menuOpen = false;
     }

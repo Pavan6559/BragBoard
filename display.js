@@ -19,19 +19,17 @@ document.addEventListener("DOMContentLoaded", async () => {
         alert("Error fetching dashboard. Check console.");
         return;
     }
-    // ✅ Continue your existing DOM creation logic here
-    // (projects, hackathons, achievements, certifications)
 
     // ===== Navbar Name =====
-    // Extract last name from the full name
+  
     const fullName = data.name || "Your Name";
     const nameParts = fullName.trim().split(" ");
     const lastName = nameParts.length > 1 ? nameParts[nameParts.length - 1] : "";
 
-    // Join all except last name for the first part
+  
     const firstName = nameParts.slice(0, -1).join(" ") || fullName;
 
-    // Update Navbar
+ 
     document.getElementById("userNameDisplay").innerHTML = `
         ${firstName} <span class="text-green-50">${lastName}</span>
     `;
@@ -67,7 +65,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         hackathonsGrid.appendChild(card);
     });
 
-    // ===== Achievements (Timeline) =====
+    // ===== Achievements  =====
     const achievementsTimeline = document.getElementById("achievementsTimeline");
     data.achievements.forEach(ach => {
         const item = document.createElement("div");
@@ -83,7 +81,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         achievementsTimeline.appendChild(item);
     });
 
-    // ===== Certifications (Grid in Section) =====
+    // ===== Certifications  =====
     const certSection = document.getElementById("certificationsSection");
     const grid = document.createElement("div");
     grid.className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6";
@@ -106,7 +104,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     certSection.appendChild(grid);
 
 
-        // ===== Share Button =====
+       
     const shareBtn = document.getElementById("shareBtn");
 
     if (shareBtn) {
@@ -122,7 +120,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     });
                     console.log("Shared successfully");
                 } else {
-                    // Fallback: Copy link with user feedback
+                    
                     await navigator.clipboard.writeText(shareUrl);
                     alert(`Link copied! Paste it in any app to share:\n\n${shareUrl}`);
                 }

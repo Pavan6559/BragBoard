@@ -3,7 +3,7 @@ import { db } from "./firebase.js";
 import { doc, setDoc } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
  
 
-// 🚩 Helper: Create a styled text input
+//  Helper: Create a styled text input
 function createInput(placeholder) {
     const input = document.createElement("input");
     input.type = "text";
@@ -12,7 +12,7 @@ function createInput(placeholder) {
     return input;
 }
 
-// 🚩 Helper: Create custom file upload with preview (Base64 for Firestore)
+//  Helper: Create custom file upload with preview (Base64 for Firestore)
 function createFileInput(container) {
     const fileInput = document.createElement("input");
     fileInput.type = "file";
@@ -66,7 +66,7 @@ function createFileInput(container) {
     return fileInput;
 }
 
-// 🚩 Section Handlers
+//  Section Handlers
 function addSectionHandler(buttonId, containerId, fields) {
     document.getElementById(buttonId).addEventListener("click", () => {
         const container = document.getElementById(containerId);
@@ -80,13 +80,13 @@ function addSectionHandler(buttonId, containerId, fields) {
     });
 }
 
-// ✅ Register section handlers
+//  Register section handlers
 addSectionHandler("addProjectBtn", "projectsContainer", ["Project Title", "Project Description", "Project Link (optional)"]);
 addSectionHandler("addHackathonBtn", "hackathonsContainer", ["Hackathon Name", "Role/Description", "Link (optional)"]);
 addSectionHandler("addAchievementBtn", "achievementsContainer", ["Achievement Title", "Description"]);
 addSectionHandler("addCertificationBtn", "certificationsContainer", ["Certification Title", "Description", "Link (optional)"]);
 
-// 🚩 Mobile Menu Toggle
+//  Mobile Menu Toggle
 const bars = document.getElementById("menu-btn");
 const options = document.getElementById("options");
 let menuOpen = false;
@@ -112,7 +112,7 @@ bars.addEventListener("click", () => {
     }
 });
 
-// 🚩 Save to Firestore
+//  Save to Firestore
 document.addEventListener("DOMContentLoaded", () => {
     console.log("dashboard.js loaded ✅");
 

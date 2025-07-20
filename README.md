@@ -19,6 +19,10 @@ Check out BragBoard in action:
 
 [👉 Live Demo](https://pavan6559.github.io/BragBoard/)
 
+⚠️ Current Limitations
+For now, you can only upload one image per entry (no PDFs).
+
+Your dashboard link is temporary unless you save/bookmark it; otherwise, you will need to recreate it.
 
 ## 🛠️ Tech Stack
 

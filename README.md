@@ -17,7 +17,7 @@ BragBoard is a **personal online dashboard builder** that allows students, devel
 
 Check out BragBoard in action:
 
-[👉 Live Demo](https://your-bragboard.vercel.app)
+[👉 Live Demo](https://pavan6559.github.io/BragBoard/)
 
 
 ## 🛠️ Tech Stack

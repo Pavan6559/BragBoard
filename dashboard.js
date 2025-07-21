@@ -1,6 +1,6 @@
 
 import { db } from "./firebase.js";
-import { doc, setDoc } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+import { doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
  
 
 //  Helper: Create a styled text input

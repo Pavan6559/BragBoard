@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const hackathonsGrid = document.getElementById("hackathonsGrid");
     data.hackathons.forEach(hack => {
         const card = document.createElement("div");
-        card.className = "bg-white rounded-lg shadow p-4 hover:scale-105";
+        card.className = "bg-white rounded-lg shadow p-4 hover:scale-105 transition-all";
 
         card.innerHTML = `
             <h3 class="font-bold">${hack.name || "Untitled Hackathon"}</h3>
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     data.certifications.forEach(cert => {
         const card = document.createElement("div");
-        card.className = "bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden hover:scale-105 flex flex-col";
+        card.className = "bg-white rounded-lg shadow hover:shadow-lg transition-all overflow-hidden hover:scale-105 flex flex-col";
 
         card.innerHTML = `
             ${cert.imageSrc ? `<img src="${cert.imageSrc}" class="object-cover w-full h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80 rounded-t-lg" alt="Certification Image">` : ""}

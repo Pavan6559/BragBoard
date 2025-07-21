@@ -126,6 +126,12 @@ document.addEventListener("DOMContentLoaded", () => {
     saveBtn.addEventListener("click", async () => {
     console.log("Save button pressed");
 
+    const userId = document.getElementById("nameInput").value.trim().toLowerCase().replace(/\s+/g, "_");
+    if (!userId) {
+        alert("Please enter your name.");
+        return;
+    }
+     
     const dashboardData = {
         name: document.getElementById("nameInput").value,
         socials: {
@@ -191,7 +197,13 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Saving to Firestore:", dashboardData);
 
         try {
-            await setDoc(doc(db, "dashboards", "user_dashboard"), dashboardData);
+            const userDocRef = doc(db, "dashboards", userId);
+            const existingDoc = await getDoc(userDocRef);
+            if (existingDoc.exists()) {
+                const overwrite = confirm("This name is already taken. Do you want to overwrite your existing dashboard?");
+                if (!overwrite) return;
+             }
+            await setDoc(doc(db, "dashboards", "userId"), dashboardData);
             alert("Dashboard saved successfully!");
              window.location.href = "display.html"; 
         } catch (error) {

@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
              }
             await setDoc(doc(db, "dashboards", userId), dashboardData);
             alert("Dashboard saved successfully!");
-             window.location.href = "display.html"; 
+            window.location.href = `display.html?user=${userId}`; 
         } catch (error) {
             console.error("Error saving to Firestore:", error);
             alert("Error saving dashboard. Check console for details.");

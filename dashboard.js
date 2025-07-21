@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const overwrite = confirm("This name is already taken. Do you want to overwrite your existing dashboard?");
                 if (!overwrite) return;
              }
-            await setDoc(doc(db, "dashboards", "userId"), dashboardData);
+            await setDoc(doc(db, "dashboards", userId), dashboardData);
             alert("Dashboard saved successfully!");
              window.location.href = "display.html"; 
         } catch (error) {

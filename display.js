@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     try {
-        const docSnap = await getDoc(doc(db, "dashboards", "userId"));
+        const docSnap = await getDoc(doc(db, "dashboards", userId));
         if (docSnap.exists()) {
             data = docSnap.data();
         } else {

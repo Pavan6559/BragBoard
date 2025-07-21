@@ -3,9 +3,16 @@ import { doc, getDoc } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-
 
 document.addEventListener("DOMContentLoaded", async () => {
     let data = null;
+    const params = new URLSearchParams(window.location.search);
+    const userId = params.get("user");
+    if (!userId) {
+        alert("No user specified in URL. Redirecting to dashboard creation.");
+        window.location.href = "dashboard.html";
+        return;
+    }
 
     try {
-        const docSnap = await getDoc(doc(db, "dashboards", "user_dashboard"));
+        const docSnap = await getDoc(doc(db, "dashboards", "userId"));
         if (docSnap.exists()) {
             data = docSnap.data();
         } else {
